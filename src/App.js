@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import Curso from "./Curso";
 
 function App() {
+
+  const [curso, setCurso] = React.useState()
+  const [carregando, setCarregando] = React.useState(null)
+
+  async function buscar_curso(event){
+      setCarregando(true)
+      const required = await fetch(`http://localhost:3003/${event.target.id}`)
+      const respose = await required.json()
+      setCurso(respose)
+      setCarregando(false)
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <button onClick={buscar_curso} id="programacao">Programação</button>
+        <button onClick={buscar_curso} id="data">Data Science</button>
+
+        {curso && !carregando && <Curso dados={curso}/>}
+
+        {carregando && <p>Carregando...</p>}
+    </>
+
   );
 }
 

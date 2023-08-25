@@ -1,0 +1,26 @@
+{
+    "programacao": {
+        "id": "programacao",
+        "fotos": [
+            {
+                "titulo": "Programação FullStack",
+                "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKAyA4W1YdOeC55bNytmI7WlX32LqmhyIeRcyuyP4K5Wyi_CoEbZq5qCTU8vyTc6QXhpI&usqp=CAU"
+            }
+        ],
+        "nome": "Programação FullStack",
+        "duracao": "13 meses",
+        "descricao": "Curso de programação full stack."
+    },
+    "data": {
+        "id": "data",
+        "fotos": [
+            {
+                "titulo": "Data Science",
+                "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpDGWcfifmrcU17Dl0_wtbLk91IIfEXydqT6T-9HvAMQcpxaM_9Ou9gGN1s3BHL7Ws3bo&usqp=CAU"
+            }
+        ],
+        "nome": "Data Science",
+        "duracao": "8 meses",
+        "descricao": "Curso de data science."
+    }
+}
